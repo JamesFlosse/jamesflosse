@@ -1,5 +1,5 @@
 ### Hi there 👋
-🔭 I’m currently in training at o'clock 
+## 🔭 I’m currently in training at O'clock School. 
 <!--
 **JamesFlosse/jamesflosse** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
