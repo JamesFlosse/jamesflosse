@@ -17,6 +17,9 @@ nav {
 }
 
 article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     border: 1px solid black;
 }
 
@@ -41,11 +44,15 @@ footer {
     bottom: 0;
 }
 .wrapper{
+    width: 80%;
+    height: 80vh;
     display: flex;
     justify-content: space-between;
-    margin: 0 5% 0 5%;
+    margin: 0 2% 0 20%;
 }
 
 .article{
+    display: flex;
     padding-left: 1%;
+    width: calc(145% / 4);
 }
