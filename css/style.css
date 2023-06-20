@@ -7,9 +7,19 @@ body {
 aside {
     border: 1px solid black ;
 }
+aside img{
+    border: 1px solid orange;
+    height: 100px;
+    border-radius: 20px;
+    margin-left: 17%;
+}
 
-section{
-    border: 1px solid black ;
+main{
+    
+}
+
+h2{
+    text-align: right;
 }
 
 nav {
@@ -19,29 +29,27 @@ nav {
 article {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    border: 1px solid black;
-}
-
-main{
-    
+    justify-content: space-evenly;
 }
 
 main, aside{
-    background-color: #3E3E3E;
-    padding: 20px;
-    border-radius: 20px;
-    margin: 0 20% 0 0;
+    min-height: 85%;
 }
 
+aside p{
+    background-color: #535353;
+    border-radius: 20px;
+    text-align: center;
+    padding: 2px 10px 10px 10px;
+}
 nav{
     background-color: #535353;
+    text-align: end;
+    text-transform: ;
 }
 
 footer {
-    position: absolute;
-    left: 50%;
-    bottom: 0;
+    text-align: center;
 }
 .wrapper{
     width: 80%;
@@ -55,4 +63,6 @@ footer {
     display: flex;
     padding-left: 1%;
     width: calc(145% / 4);
+    margin: 1%;
+    border: 1px solid orange;
 }
