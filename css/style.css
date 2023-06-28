@@ -1,5 +1,6 @@
-body {
+html, body {
     height: 100vh;
+    margin: 0px;
 }
 
 nav{
@@ -30,6 +31,47 @@ aside p{
     margin-top: 15%;
     margin-left: 50%;
 }
+
+.grid2x2 {
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.grid2x2 > article {
+    display: flex;
+    flex-basis: calc(50%-40px);
+    justify-content: center;
+    flex-direction: column;
+}
+
+.grid2x2 > article > article {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.article {
+    margin: 20px;
+}
+
+.article1 {
+    background-color: red;
+}
+
+.article2 {
+    background-color: orange;
+}
+
+.article3 {
+    background-color: blue;
+}
+
+.article4 {
+    background-color: green;
+}
+
 footer {
     text-align: center;
 }

@@ -13,4 +13,5 @@
     <title>James Flosse</title>
   </head>
   <?php require "main.php" ?>
+  <?php require "footer.php" ?>
 </html>
