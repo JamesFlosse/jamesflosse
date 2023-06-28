@@ -4,7 +4,7 @@ html, body {
 }
 
 nav{
-    margin-left: 80%;
+    margin-left: 50%;
 }
 aside {
     position: fixed;
@@ -27,9 +27,10 @@ aside p{
 
 .right{
     width: 50%;
-    height: 100vh;
-    margin-top: 15%;
+    height: 50vh;
+    margin-top: 8%;
     margin-left: 50%;
+    padding-top: 5%;
 }
 
 .grid2x2 {
@@ -39,14 +40,15 @@ aside p{
     flex-direction: row;
 }
 
-.grid2x2 > article {
+.grid2x2 > div {
     display: flex;
-    flex-basis: calc(50%-40px);
+    flex-basis: calc(34%);
     justify-content: center;
     flex-direction: column;
+    padding: 10px;
 }
 
-.grid2x2 > article > article {
+.grid2x2 > div > div {
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -54,6 +56,7 @@ aside p{
 
 .article {
     margin: 20px;
+    border-radius: 10px;
 }
 
 .article1 {

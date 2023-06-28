@@ -4,4 +4,6 @@
         <p>Formation Web Developper</p>
         <p>Email: james.flosse@oclock.school</p>
         <p>Country: France</p>
-      </aside>
+        <?php require "footer.php" ?>
+</aside>
+
