@@ -2,9 +2,8 @@
     <main>
         <?php require "aside.php" ?>
         <div class="right">
-        <h2>About Me</h2>
-        <?php require "nav.php" ?>
         <?php require "article.php" ?>
         </div>
     </main>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>

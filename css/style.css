@@ -3,9 +3,6 @@ html, body {
     margin: 0px;
 }
 
-nav{
-    margin-left: 50%;
-}
 aside {
     position: fixed;
     width: 50%;
@@ -28,7 +25,6 @@ aside p{
 .right{
     width: 50%;
     height: 50vh;
-    margin-top: 8%;
     margin-left: 50%;
     padding-top: 5%;
 }
