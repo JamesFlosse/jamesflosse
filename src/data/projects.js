@@ -3,7 +3,7 @@
 const projects = [
   {
     id: '2',
-    name: 'BoardGamsStudios',
+    name: 'BoardGameStudios',
     description: 'Description courte du projet, une à deux phrases.',
     githubUrl: null,
     link: 'https://boardgamestudios.fr', // Lien personnalisé pour les projets privés ou sans repo GitHub
@@ -22,10 +22,10 @@ const projects = [
     link: null, // Lien personnalisé pour les projets privés ou sans repo GitHub
     stack: ['Laravel', 'Filament'],
     image: null,
-    backgroundImage: 'public/images/project/aec/logo.png',
+    backgroundImage: 'images/project/aec/logo.png',
     screenshots: [
-      'public/images/project/aec/1.png',
-      'public/images/project/aec/2.png',
+      'images/project/aec/1.png',
+      'images/project/aec/2.png',
     ],
   },
 ];
