@@ -1,0 +1,39 @@
+@use '../../styles/variables' as v;
+
+.Header {
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	height: v.$header-height;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 v.$spacing-md;
+	background-color: v.$color-bg;
+	border-bottom: 1px solid v.$color-border;
+
+	&-brand {
+		font-family: v.$font-family-heading;
+		font-size: 1.25rem;
+		font-weight: 600;
+		color: v.$color-text;
+		text-decoration: none;
+	}
+
+	&-nav {
+		display: flex;
+		gap: v.$spacing-md;
+
+		a {
+			color: v.$color-text-muted;
+			text-decoration: none;
+			padding-bottom: 2px;
+			border-bottom: 1px solid transparent;
+
+			&:hover {
+				color: v.$color-primary;
+				border-bottom-color: v.$color-primary;
+			}
+		}
+	}
+}

@@ -1,0 +1,41 @@
+@use '../../styles/variables' as v;
+
+.Hero {
+	position: relative;
+	min-height: calc(100vh - #{v.$header-height});
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	gap: v.$spacing-sm;
+	padding: v.$spacing-md;
+	max-width: v.$content-max-width;
+	margin: 0 auto;
+
+	h1 {
+		font-size: v.$font-size-xl;
+		line-height: 1.05;
+		margin: 0;
+	}
+
+	p {
+		color: v.$color-text-muted;
+		font-size: v.$font-size-lg;
+		max-width: 40ch;
+		margin: 0;
+	}
+
+	&-cta {
+		margin-top: v.$spacing-sm;
+		color: v.$color-bg;
+		background-color: v.$color-primary;
+		padding: v.$spacing-xs v.$spacing-md;
+		border-radius: 999px;
+		text-decoration: none;
+		font-weight: 600;
+
+		&:hover {
+			background-color: v.$color-text;
+		}
+	}
+}

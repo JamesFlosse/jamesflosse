@@ -26,6 +26,10 @@ module.exports = {
       files: ['src/**/store/**/*.ts'],
       rules: { 'no-param-reassign': ['error', { props: false }] },
     },
+    {
+      files: ['src/**/*.jsx'],
+      rules: { 'react/prop-types': 0 },
+    },
   ],
   plugins: ['react', '@typescript-eslint', 'prettier'],
   rules: {

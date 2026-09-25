@@ -1,0 +1,33 @@
+@use '../../styles/variables' as v;
+
+.ContactSection {
+	max-width: v.$content-max-width;
+	margin: 0 auto;
+	padding: v.$spacing-lg v.$spacing-md;
+
+	h2 {
+		margin-bottom: v.$spacing-md;
+	}
+
+	&-links {
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		gap: v.$spacing-xs;
+		margin: 0;
+		padding: 0;
+
+		a {
+			font-family: v.$font-family-heading;
+			font-size: v.$font-size-lg;
+			color: v.$color-text;
+			text-decoration: none;
+			border-bottom: 1px solid transparent;
+
+			&:hover {
+				color: v.$color-primary;
+				border-bottom-color: v.$color-primary;
+			}
+		}
+	}
+}

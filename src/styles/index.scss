@@ -1,13 +1,29 @@
 @use 'reset';
 @use 'variables' as v;
 
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: v.$header-height;
+
+	@media (prefers-reduced-motion: reduce) {
+		scroll-behavior: auto;
+	}
+}
+
 body {
+	background-color: v.$color-bg;
+	color: v.$color-text;
 	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-		sans-serif;
+	font-family: v.$font-family-base;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3 {
+	font-family: v.$font-family-heading;
+	font-weight: 600;
 }
 
 code {

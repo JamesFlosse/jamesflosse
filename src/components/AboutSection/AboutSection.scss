@@ -1,0 +1,16 @@
+@use '../../styles/variables' as v;
+
+.AboutSection {
+	max-width: v.$content-max-width;
+	margin: 0 auto;
+	padding: v.$spacing-lg v.$spacing-md;
+
+	h2 {
+		margin-bottom: v.$spacing-md;
+	}
+
+	p {
+		color: v.$color-text-muted;
+		max-width: 65ch;
+	}
+}

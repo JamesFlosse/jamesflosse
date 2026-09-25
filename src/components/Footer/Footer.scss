@@ -1,0 +1,9 @@
+@use '../../styles/variables' as v;
+
+.Footer {
+	text-align: center;
+	padding: v.$spacing-md;
+	color: v.$color-text-muted;
+	border-top: 1px solid v.$color-border;
+	background-color: v.$color-bg-alt;
+}

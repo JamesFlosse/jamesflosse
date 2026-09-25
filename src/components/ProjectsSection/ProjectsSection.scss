@@ -1,0 +1,17 @@
+@use '../../styles/variables' as v;
+
+.ProjectsSection {
+	max-width: v.$content-max-width;
+	margin: 0 auto;
+	padding: v.$spacing-lg v.$spacing-md;
+
+	h2 {
+		margin-bottom: v.$spacing-md;
+	}
+
+	&-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+		gap: v.$spacing-lg v.$spacing-md;
+	}
+}

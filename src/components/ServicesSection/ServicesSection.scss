@@ -1,0 +1,54 @@
+@use '../../styles/variables' as v;
+
+.ServicesSection {
+	max-width: v.$content-max-width;
+	margin: 0 auto;
+	padding: v.$spacing-lg v.$spacing-md;
+
+	h2 {
+		margin-bottom: v.$spacing-xs;
+	}
+
+	&-note {
+		color: v.$color-accent;
+		margin-top: 0;
+		margin-bottom: v.$spacing-md;
+		font-style: italic;
+	}
+
+	&-list {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.ServiceCard {
+	display: flex;
+	gap: v.$spacing-md;
+	align-items: baseline;
+	padding: v.$spacing-md 0;
+	border-top: 1px solid v.$color-border;
+
+	&:last-child {
+		border-bottom: 1px solid v.$color-border;
+	}
+
+	&-index {
+		font-family: v.$font-family-heading;
+		font-size: v.$font-size-lg;
+		color: v.$color-accent;
+		flex-shrink: 0;
+		width: 2.5rem;
+	}
+
+	h3 {
+		margin: 0 0 v.$spacing-xs;
+		font-size: 1.25rem;
+	}
+
+	p {
+		color: v.$color-text-muted;
+		margin: 0;
+		max-width: 60ch;
+	}
+}

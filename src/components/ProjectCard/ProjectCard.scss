@@ -1,0 +1,88 @@
+@use '../../styles/variables' as v;
+
+.ProjectCard {
+	display: flex;
+	flex-direction: column;
+	gap: v.$spacing-xs;
+	overflow: hidden;
+	border-bottom: 1px solid v.$color-border;
+	padding-bottom: v.$spacing-sm;
+
+	&-background-wrapper {
+		width: 100%;
+		height: 200px;
+		position: relative;
+		margin-bottom: v.$spacing-xs;
+		overflow: hidden;
+
+		&:not(:empty) {
+			margin-bottom: v.$spacing-xs;
+		}
+	}
+
+	&-background {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			opacity: 0.4; /* Transparence appliquée à l'image de fond */
+		}
+	}
+
+	&-image {
+		width: 100%;
+		aspect-ratio: 16 / 9;
+		object-fit: cover;
+		border-radius: 4px;
+		margin-bottom: v.$spacing-xs;
+	}
+
+	h3 {
+		margin: 0;
+		font-size: 1.15rem;
+	}
+
+	p {
+		color: v.$color-text-muted;
+		margin: 0;
+		flex-grow: 1;
+	}
+
+	&-stack {
+		font-size: 0.85rem;
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+		color: v.$color-accent;
+		flex-grow: 0 !important;
+	}
+
+	&-screenshots {
+		display: flex;
+		gap: v.$spacing-xs;
+		margin-top: v.$spacing-xs;
+
+		img {
+			width: calc(50% - v.$spacing-xs);
+			height: 120px;
+			object-fit: cover;
+			border-radius: 4px;
+		}
+	}
+
+	&-link {
+		color: v.$color-primary;
+		text-decoration: none;
+		font-weight: 600;
+		align-self: flex-start;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
