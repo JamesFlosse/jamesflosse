@@ -9,7 +9,7 @@ const services = [
     id: 'outils-gestion',
     title: 'Outils de gestion internes',
     description:
-      'Backoffice sur mesure : suivi des adhérents, des bénévoles, des dossiers — comme pour Entraide Chômeurs.',
+      "Un besoin particulier à suivre au quotidien (stock, adhérents, dossiers) ? On construit ensemble le cahier des charges d'un backoffice adapté.",
   },
   {
     id: 'maintenance',
