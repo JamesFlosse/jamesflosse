@@ -35,5 +35,52 @@
 				border-bottom-color: v.$color-primary;
 			}
 		}
+
+		@media (max-width: #{v.$bp-tablet - 1px}) {
+			display: none;
+		}
+	}
+}
+
+.TabBar {
+	display: none;
+
+	@media (max-width: #{v.$bp-tablet - 1px}) {
+		display: flex;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 10;
+		height: calc(#{v.$tabbar-height} + env(safe-area-inset-bottom));
+		padding-bottom: env(safe-area-inset-bottom);
+		background-color: rgba(253, 246, 238, 0.9);
+		backdrop-filter: blur(12px);
+		border-top: 1px solid v.$color-border;
+	}
+
+	&-item {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 2px;
+		color: v.$color-text-muted;
+		text-decoration: none;
+
+		svg {
+			width: 22px;
+			height: 22px;
+		}
+
+		span {
+			font-size: 0.65rem;
+		}
+
+		&:hover,
+		&:active {
+			color: v.$color-primary;
+		}
 	}
 }

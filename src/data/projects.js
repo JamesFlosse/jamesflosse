@@ -23,10 +23,7 @@ const projects = [
     stack: ['Laravel', 'Filament'],
     image: null,
     backgroundImage: 'images/project/aec/logo.png',
-    screenshots: [
-      'images/project/aec/1.png',
-      'images/project/aec/2.png',
-    ],
+    screenshots: ['images/project/aec/1.png', 'images/project/aec/2.png'],
   },
 ];
 
