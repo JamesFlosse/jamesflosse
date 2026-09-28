@@ -1,6 +1,7 @@
 @use '../../styles/variables' as v;
 
 .ServicesSection {
+	min-height: calc(100vh - #{v.$header-height});
 	max-width: v.$content-max-width;
 	margin: 0 auto;
 	padding: v.$spacing-lg v.$spacing-md;
@@ -50,5 +51,16 @@
 		color: v.$color-text-muted;
 		margin: 0;
 		max-width: 60ch;
+	}
+}
+
+@media (max-width: #{v.$bp-tablet - 1px}) {
+	.ServiceCard {
+		gap: v.$spacing-sm;
+
+		&-index {
+			width: 1.75rem;
+			font-size: 1.25rem;
+		}
 	}
 }

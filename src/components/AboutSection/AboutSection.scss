@@ -1,6 +1,7 @@
 @use '../../styles/variables' as v;
 
 .AboutSection {
+	min-height: calc(100vh - #{v.$header-height});
 	max-width: v.$content-max-width;
 	margin: 0 auto;
 	padding: v.$spacing-lg v.$spacing-md;

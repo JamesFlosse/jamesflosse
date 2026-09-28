@@ -1,6 +1,7 @@
 @use '../../styles/variables' as v;
 
 .ProjectsSection {
+	min-height: calc(100vh - #{v.$header-height});
 	max-width: v.$content-max-width;
 	margin: 0 auto;
 	padding: v.$spacing-lg v.$spacing-md;
@@ -10,8 +11,8 @@
 	}
 
 	&-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+		display: flex;
+		flex-wrap: wrap;
 		gap: v.$spacing-lg v.$spacing-md;
 	}
 }

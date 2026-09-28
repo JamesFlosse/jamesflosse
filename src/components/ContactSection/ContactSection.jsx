@@ -1,51 +1,45 @@
 import './ContactSection.scss';
 
-// TODO(james) : confirme l'adresse à afficher publiquement
-// (pro vs perso) et tes liens réseaux avant mise en ligne.
-const contactLinks = [
-  {
-    href: 'mailto:contact@jamesflosse.fr',
-    label: 'contact@jamesflosse.fr',
-    hint: 'Email',
-  },
-  {
-    href: 'https://github.com/JamesFlosse',
-    label: 'GitHub',
-    hint: 'Code & projets',
-    external: true,
-  },
-  {
-    href: 'https://www.linkedin.com/in/james-flosse',
-    label: 'LinkedIn',
-    hint: 'Réseau pro',
-    external: true,
-  },
-];
+// L'adresse est affichée avec « at » et le mailto est assemblé à l'exécution :
+// le littéral complet n'apparaît nulle part dans le bundle, ce qui limite
+// la récolte automatique par les robots à spam.
+const EMAIL_USER = 'contact';
+const EMAIL_DOMAIN = 'jamesflosse.fr';
+const emailDisplay = `${EMAIL_USER} at ${EMAIL_DOMAIN}`;
+const emailHref = `mailto:${EMAIL_USER}${String.fromCharCode(
+  64
+)}${EMAIL_DOMAIN}`;
 
 function ContactSection() {
   return (
     <section id="contact" className="ContactSection">
       <h2>Contact</h2>
+
       <p className="ContactSection-intro">
-        Un projet, une question ? Écrivez-moi.
+        Un projet, une question, ou simplement l&apos;envie d&apos;en discuter ?
+        Écrivez-moi, je réponds sous quelques jours.
       </p>
 
-      <div className="ContactSection-list">
-        {contactLinks.map((item, index) => (
-          <a
-            key={item.href}
-            href={item.href}
-            target={item.external ? '_blank' : undefined}
-            rel="noopener noreferrer"
-            className="ContactLink"
-          >
-            <span className="ContactLink-index">
-              {String(index + 1).padStart(2, '0')}
-            </span>
-            <span className="ContactLink-hint">{item.hint}</span>
-            <span className="ContactLink-label">{item.label}</span>
-          </a>
-        ))}
+      <a href={emailHref} className="ContactSection-cta">
+        {emailDisplay}
+      </a>
+
+      <div className="ContactSection-social">
+        <span className="ContactSection-socialLabel">Ailleurs</span>
+        <a
+          href="https://github.com/JamesFlosse"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+        <a
+          href="https://www.linkedin.com/in/james-flosse"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
       </div>
     </section>
   );

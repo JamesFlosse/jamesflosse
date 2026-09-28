@@ -1,76 +1,66 @@
 @use '../../styles/variables' as v;
 
 .ContactSection {
+	min-height: calc(100vh - #{v.$header-height});
 	max-width: v.$content-max-width;
 	margin: 0 auto;
 	padding: v.$spacing-lg v.$spacing-md;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
 
 	h2 {
-		margin-bottom: v.$spacing-xs;
+		margin-bottom: v.$spacing-sm;
 	}
 
 	&-intro {
 		color: v.$color-text-muted;
-		margin-top: 0;
-		margin-bottom: v.$spacing-md;
+		max-width: 45ch;
+		line-height: 1.6;
+		margin: 0 0 v.$spacing-md;
 	}
 
-	&-list {
+	&-cta {
+		color: v.$color-bg;
+		background-color: v.$color-primary;
+		padding: v.$spacing-xs v.$spacing-md;
+		border-radius: 999px;
+		text-decoration: none;
+		font-weight: 600;
+
+		&:hover {
+			background-color: v.$color-text;
+		}
+	}
+
+	&-social {
 		display: flex;
-		flex-direction: column;
-	}
-}
+		align-items: baseline;
+		flex-wrap: wrap;
+		gap: v.$spacing-sm;
+		margin-top: v.$spacing-lg;
+		padding-top: v.$spacing-sm;
+		border-top: 1px solid v.$color-border;
 
-.ContactLink {
-	display: flex;
-	align-items: baseline;
-	gap: v.$spacing-md;
-	padding: v.$spacing-md 0;
-	border-top: 1px solid v.$color-border;
-	text-decoration: none;
-	color: v.$color-text;
+		a {
+			color: v.$color-text-muted;
+			text-decoration: none;
+			font-weight: 600;
+			border-bottom: 1px solid transparent;
 
-	&:last-child {
-		border-bottom: 1px solid v.$color-border;
-	}
-
-	&-index {
-		font-family: v.$font-family-heading;
-		font-size: v.$font-size-lg;
-		color: v.$color-accent;
-		flex-shrink: 0;
-		width: 2.5rem;
+			&:hover {
+				color: v.$color-primary;
+				border-bottom-color: v.$color-primary;
+			}
+		}
 	}
 
-	&-hint {
+	&-socialLabel {
 		font-size: 0.85rem;
 		text-transform: uppercase;
 		letter-spacing: 0.04em;
-		color: v.$color-text-muted;
-		flex-shrink: 0;
-		width: 8rem;
-	}
-
-	&-label {
-		font-family: v.$font-family-heading;
-		font-size: v.$font-size-lg;
-		border-bottom: 1px solid transparent;
-	}
-
-	&:hover {
-		.ContactLink-label {
-			color: v.$color-primary;
-			border-bottom-color: v.$color-primary;
-		}
-	}
-}
-
-@media (max-width: #{v.$bp-tablet - 1px}) {
-	.ContactLink {
-		flex-wrap: wrap;
-
-		&-hint {
-			width: auto;
-		}
+		color: v.$color-accent;
+		margin-right: v.$spacing-xs;
 	}
 }

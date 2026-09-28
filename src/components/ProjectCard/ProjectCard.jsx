@@ -12,55 +12,64 @@ function ProjectCard({ project }) {
     screenshots,
   } = project;
 
+  // `image` = visuel pleine largeur (cadré), `backgroundImage` = logo (affiché entier).
+  const cover = image || backgroundImage;
+  const isLogo = !image && Boolean(backgroundImage);
+
+  const url = link || githubUrl;
+  const urlLabel = link ? 'Accéder au projet' : 'Voir sur GitHub';
+
   return (
     <article className="ProjectCard">
-      {/* Background image */}
-      {backgroundImage && (
-        <div className="ProjectCard-background-wrapper">
-          <div className="ProjectCard-background">
-            <img src={backgroundImage} alt={name} loading="lazy" />
-          </div>
-        </div>
-      )}
-
-      {/* Main project image */}
-      {image && (
-        <img
-          className="ProjectCard-image"
-          src={image}
-          alt={name}
-          loading="lazy"
-        />
-      )}
+      <div className="ProjectCard-media">
+        {cover ? (
+          <img
+            className={
+              isLogo
+                ? 'ProjectCard-cover ProjectCard-cover--logo'
+                : 'ProjectCard-cover'
+            }
+            src={cover}
+            alt={name}
+            loading="lazy"
+          />
+        ) : (
+          <span className="ProjectCard-placeholder" aria-hidden="true">
+            {name.charAt(0)}
+          </span>
+        )}
+      </div>
 
       <h3>{name}</h3>
-      <p>{description}</p>
+      <p className="ProjectCard-description">{description}</p>
 
-      <p className="ProjectCard-stack">{stack.join(' · ')}</p>
-
-      {/* Screenshots */}
       {screenshots && screenshots.length > 0 && (
         <div className="ProjectCard-screenshots">
           {screenshots.map((screenshot, index) => (
             <img
               key={screenshot}
-              className="ProjectCard-screenshot"
               src={screenshot}
-              alt={`Capture d'écran ${index + 1}`}
+              alt={`${name} — aperçu ${index + 1}`}
               loading="lazy"
             />
           ))}
         </div>
       )}
 
-      <a
-        className="ProjectCard-link"
-        href={link || githubUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {link ? 'Accéder au projet' : 'Voir sur GitHub'}
-      </a>
+      <div className="ProjectCard-footer">
+        <p className="ProjectCard-stack">{stack.join(' · ')}</p>
+
+        {url && (
+          <a
+            className="ProjectCard-link"
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {urlLabel}
+          </a>
+        )}
+      </div>
     </article>
   );
 }
