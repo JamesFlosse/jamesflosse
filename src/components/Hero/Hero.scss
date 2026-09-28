@@ -1,16 +1,29 @@
 @use '../../styles/variables' as v;
 
 .Hero {
-	position: relative;
 	min-height: calc(100vh - #{v.$header-height});
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	justify-content: center;
-	gap: v.$spacing-sm;
-	padding: v.$spacing-md;
 	max-width: v.$content-max-width;
 	margin: 0 auto;
+	padding: v.$spacing-md;
+	display: flex;
+	align-items: center;
+	gap: v.$spacing-lg;
+
+	// Source carrée de 288 px : on reste en dessous pour garder une image nette.
+	&-portrait {
+		flex-shrink: 0;
+		width: 260px;
+		height: 260px;
+		border-radius: 50%;
+		object-fit: cover;
+	}
+
+	&-content {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: v.$spacing-sm;
+	}
 
 	h1 {
 		font-size: v.$font-size-xl;
@@ -36,6 +49,22 @@
 
 		&:hover {
 			background-color: v.$color-text;
+		}
+	}
+}
+
+@media (max-width: #{v.$bp-tablet - 1px}) {
+	.Hero {
+		// Le portrait est premier dans le DOM : en colonne, il se place
+		// naturellement au-dessus du texte.
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		gap: v.$spacing-md;
+
+		&-portrait {
+			width: 140px;
+			height: 140px;
 		}
 	}
 }
