@@ -47,7 +47,7 @@ function Header() {
     <>
       <header className="Header">
         <a className="Header-brand" href="#accueil">
-          James Flosse
+          <img src="/images/logo-texte.svg" alt="James Flosse" />
         </a>
 
         <nav className="Header-nav">

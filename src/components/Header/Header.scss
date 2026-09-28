@@ -13,11 +13,12 @@
 	border-bottom: 1px solid v.$color-border;
 
 	&-brand {
-		font-family: v.$font-family-heading;
-		font-size: 1.25rem;
-		font-weight: 600;
-		color: v.$color-text;
-		text-decoration: none;
+		display: flex;
+		align-items: center;
+
+		img {
+			height: 32px;
+		}
 	}
 
 	&-nav {

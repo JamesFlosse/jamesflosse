@@ -6,10 +6,10 @@ function ServicesSection() {
   return (
     <section id="services" className="ServicesSection">
       <h2>Services</h2>
-      <p className="ServicesSection-note">
+      {/* <p className="ServicesSection-note">
         Activité en auto-entreprise — lancement prochainement. Contactez-moi dès
         maintenant pour en discuter.
-      </p>
+      </p> */}
 
       <div className="ServicesSection-list">
         {services.map((service, index) => (

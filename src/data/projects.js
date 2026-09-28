@@ -18,7 +18,7 @@ const projects = [
     name: 'Association Entraide Chômeurs',
     description:
       "Développement du système de backoffice de l'association. Gestion de suivi complet d'un adhérent",
-    githubUrl: 'https://github.com/ton-user/ton-repo',
+    githubUrl: null,
     link: null, // Lien personnalisé pour les projets privés ou sans repo GitHub
     stack: ['Laravel', 'Filament'],
     image: null,

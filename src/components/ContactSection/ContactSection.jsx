@@ -1,35 +1,52 @@
 import './ContactSection.scss';
 
+// TODO(james) : confirme l'adresse à afficher publiquement
+// (pro vs perso) et tes liens réseaux avant mise en ligne.
+const contactLinks = [
+  {
+    href: 'mailto:contact@jamesflosse.fr',
+    label: 'contact@jamesflosse.fr',
+    hint: 'Email',
+  },
+  {
+    href: 'https://github.com/JamesFlosse',
+    label: 'GitHub',
+    hint: 'Code & projets',
+    external: true,
+  },
+  {
+    href: 'https://www.linkedin.com/in/james-flosse',
+    label: 'LinkedIn',
+    hint: 'Réseau pro',
+    external: true,
+  },
+];
+
 function ContactSection() {
   return (
     <section id="contact" className="ContactSection">
       <h2>Contact</h2>
+      <p className="ContactSection-intro">
+        Un projet, une question ? Écrivez-moi.
+      </p>
 
-      {/* TODO(james) : confirme l'adresse à afficher publiquement
-          (pro vs perso) et tes liens réseaux avant mise en ligne. */}
-      <ul className="ContactSection-links">
-        <li>
-          <a href="mailto:contact@jamesflosse.fr">contact@jamesflosse.fr</a>
-        </li>
-        <li>
+      <div className="ContactSection-list">
+        {contactLinks.map((item, index) => (
           <a
-            href="https://github.com/JamesFlosse"
-            target="_blank"
+            key={item.href}
+            href={item.href}
+            target={item.external ? '_blank' : undefined}
             rel="noopener noreferrer"
+            className="ContactLink"
           >
-            GitHub
+            <span className="ContactLink-index">
+              {String(index + 1).padStart(2, '0')}
+            </span>
+            <span className="ContactLink-hint">{item.hint}</span>
+            <span className="ContactLink-label">{item.label}</span>
           </a>
-        </li>
-        <li>
-          <a
-            href="https://www.linkedin.com/in/james-flosse"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LinkedIn
-          </a>
-        </li>
-      </ul>
+        ))}
+      </div>
     </section>
   );
 }
