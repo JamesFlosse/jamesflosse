@@ -5,6 +5,10 @@
 	max-width: v.$content-max-width;
 	margin: 0 auto;
 	padding: v.$spacing-lg v.$spacing-md;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
 
 	h2 {
 		margin-bottom: v.$spacing-md;
@@ -13,5 +17,13 @@
 	p {
 		color: v.$color-text-muted;
 		max-width: 65ch;
+		// Le reset impose line-height: 1 sur body : indispensable de le
+		// surcharger ici, sinon les lignes d'un texte long se collent.
+		line-height: 1.7;
+		margin: 0 0 v.$spacing-sm;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
 	}
 }
