@@ -25,7 +25,7 @@ function ContactSection() {
       </a>
 
       <div className="ContactSection-social">
-        <span className="ContactSection-socialLabel">Ailleurs</span>
+        <span className="ContactSection-socialLabel">Où sur: </span>
         <a
           href="https://github.com/JamesFlosse"
           target="_blank"
