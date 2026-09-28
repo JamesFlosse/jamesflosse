@@ -12,11 +12,17 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Hero />
-      <ServicesSection />
-      <ProjectsSection />
-      <AboutSection />
-      <ContactSection />
+
+      {/* Repère principal : permet aux lecteurs d'écran de sauter
+          directement au contenu, en passant la navigation. */}
+      <main>
+        <Hero />
+        <ServicesSection />
+        <ProjectsSection />
+        <AboutSection />
+        <ContactSection />
+      </main>
+
       <Footer />
     </div>
   );

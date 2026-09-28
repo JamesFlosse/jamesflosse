@@ -50,7 +50,7 @@ function Header() {
           <img src="/images/logo-texte.svg" alt="James Flosse" />
         </a>
 
-        <nav className="Header-nav">
+        <nav className="Header-nav" aria-label="Navigation principale">
           {navItems.map((item) => (
             <a key={item.href} href={item.href}>
               {item.label}
@@ -59,7 +59,7 @@ function Header() {
         </nav>
       </header>
 
-      <nav className="TabBar">
+      <nav className="TabBar" aria-label="Navigation mobile">
         {navItems.map((item) => (
           <a key={item.href} href={item.href} className="TabBar-item">
             <svg
