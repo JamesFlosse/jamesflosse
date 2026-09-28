@@ -1,0 +1,89 @@
+@use '../../styles/variables' as v;
+
+.ProjectModal {
+	width: min(760px, calc(100vw - #{v.$spacing-md}));
+	max-height: calc(100vh - #{v.$spacing-lg});
+	padding: 0;
+	border: 1px solid v.$color-border;
+	border-radius: 10px;
+	background-color: v.$color-bg;
+	color: v.$color-text;
+	overflow: auto;
+
+	&::backdrop {
+		background-color: rgba(43, 36, 32, 0.6);
+	}
+
+	&-inner {
+		position: relative;
+		padding: v.$spacing-md;
+	}
+
+	&-close {
+		position: absolute;
+		top: v.$spacing-xs;
+		right: v.$spacing-xs;
+		width: 2.25rem;
+		height: 2.25rem;
+		font-size: 1.5rem;
+		line-height: 1;
+		color: v.$color-text-muted;
+		background: none;
+		border: 0;
+		border-radius: 50%;
+
+		&:hover {
+			color: v.$color-primary;
+			background-color: v.$color-bg-alt;
+		}
+	}
+
+	h3 {
+		font-size: v.$font-size-2xl;
+		margin: 0 v.$spacing-lg v.$spacing-xs 0;
+	}
+
+	&-stack {
+		font-size: 0.85rem;
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+		color: v.$color-accent;
+		margin: 0 0 v.$spacing-sm;
+	}
+
+	&-description {
+		color: v.$color-text-muted;
+		line-height: 1.6;
+		max-width: 65ch;
+		margin: 0;
+		white-space: pre-line;
+	}
+
+	&-gallery {
+		display: flex;
+		flex-direction: column;
+		gap: v.$spacing-sm;
+		margin-top: v.$spacing-md;
+
+		img {
+			width: 100%;
+			border: 1px solid v.$color-border;
+			border-radius: 6px;
+		}
+	}
+
+	&-link {
+		display: inline-block;
+		margin-top: v.$spacing-md;
+		color: v.$color-bg;
+		background-color: v.$color-primary;
+		padding: v.$spacing-xs v.$spacing-md;
+		border-radius: 999px;
+		text-decoration: none;
+		font-weight: 600;
+
+		&:hover {
+			background-color: v.$color-text;
+		}
+	}
+}

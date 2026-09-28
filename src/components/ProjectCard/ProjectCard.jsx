@@ -1,23 +1,11 @@
 import './ProjectCard.scss';
 
-function ProjectCard({ project }) {
-  const {
-    name,
-    description,
-    githubUrl,
-    link,
-    stack,
-    image,
-    backgroundImage,
-    screenshots,
-  } = project;
+function ProjectCard({ project, onOpen }) {
+  const { name, description, stack, image, backgroundImage } = project;
 
   // `image` = visuel pleine largeur (cadré), `backgroundImage` = logo (affiché entier).
   const cover = image || backgroundImage;
   const isLogo = !image && Boolean(backgroundImage);
-
-  const url = link || githubUrl;
-  const urlLabel = link ? 'Accéder au projet' : 'Voir sur GitHub';
 
   return (
     <article className="ProjectCard">
@@ -40,35 +28,21 @@ function ProjectCard({ project }) {
         )}
       </div>
 
-      <h3>{name}</h3>
-      <p className="ProjectCard-description">{description}</p>
+      {/* Le bouton porte l'action ; son ::after couvre toute la carte,
+          ce qui la rend cliquable sans imbriquer d'éléments interactifs. */}
+      <h3>
+        <button type="button" className="ProjectCard-trigger" onClick={onOpen}>
+          {name}
+        </button>
+      </h3>
 
-      {screenshots && screenshots.length > 0 && (
-        <div className="ProjectCard-screenshots">
-          {screenshots.map((screenshot, index) => (
-            <img
-              key={screenshot}
-              src={screenshot}
-              alt={`${name} — aperçu ${index + 1}`}
-              loading="lazy"
-            />
-          ))}
-        </div>
-      )}
+      <p className="ProjectCard-description">{description}</p>
 
       <div className="ProjectCard-footer">
         <p className="ProjectCard-stack">{stack.join(' · ')}</p>
-
-        {url && (
-          <a
-            className="ProjectCard-link"
-            href={url}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {urlLabel}
-          </a>
-        )}
+        <span className="ProjectCard-cue" aria-hidden="true">
+          Voir le détail
+        </span>
       </div>
     </article>
   );
