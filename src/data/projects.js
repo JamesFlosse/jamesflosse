@@ -1,11 +1,12 @@
-// TODO(james) : remplace ces entrées d'exemple par tes vrais projets
-// (y compris tes dépôts privés, le lien GitHub suffit même si le repo n'est pas public).
+// Chaque projet : `link` (site en ligne) ou `githubUrl` (dépôt) — le bouton
+// n'apparaît que si l'un des deux est renseigné. `backgroundImage` sert au logo,
+// `image` à un visuel pleine largeur, `screenshots` aux aperçus.
 const projects = [
   {
     id: '2',
     name: 'BoardGameStudios',
     description:
-      "Site vitrine d'un studio de jeux de stratégie indépendant : présentation du catalogue, actualités du studio et inscriptions à la bêta fermée.",
+      "Site vitrine d'un studio de jeux indépendant : présentation du catalogue et actualités.",
     githubUrl: null,
     link: 'https://boardgamestudios.fr', // Lien personnalisé pour les projets privés ou sans repo GitHub
     stack: ['React', 'Node.js'],
@@ -18,7 +19,7 @@ const projects = [
     id: '1',
     name: 'Association Entraide Chômeurs',
     description:
-      "Développement du système de backoffice de l'association. Gestion de suivi complet d'un adhérent",
+      "Création du site de l'association : vitrine et back-office pour le suivi des adhérents.",
     githubUrl: null,
     link: null, // Lien personnalisé pour les projets privés ou sans repo GitHub
     stack: ['Laravel', 'Filament'],
