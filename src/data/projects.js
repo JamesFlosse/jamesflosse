@@ -4,7 +4,8 @@ const projects = [
   {
     id: '2',
     name: 'BoardGameStudios',
-    description: 'Description courte du projet, une à deux phrases.',
+    description:
+      "Site vitrine d'un studio de jeux de stratégie indépendant : présentation du catalogue, actualités du studio et inscriptions à la bêta fermée.",
     githubUrl: null,
     link: 'https://boardgamestudios.fr', // Lien personnalisé pour les projets privés ou sans repo GitHub
     stack: ['React', 'Node.js'],
