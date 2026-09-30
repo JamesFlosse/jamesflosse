@@ -49,10 +49,7 @@
 	@media (max-width: #{v.$bp-tablet - 1px}) {
 		display: flex;
 		position: fixed;
-		// Cale la barre sur le viewport réellement visible (mesuré en JS via
-		// visualViewport) plutôt que sur le viewport de mise en page, qui reste
-		// plus grand tant que la barre d'adresse du navigateur est déployée.
-		bottom: var(--tabbar-visual-offset, 0px);
+		bottom: 0;
 		left: 0;
 		right: 0;
 		z-index: 10;

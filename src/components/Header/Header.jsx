@@ -1,5 +1,3 @@
-import { useEffect } from 'react';
-
 import './Header.scss';
 
 const navItems = [
@@ -45,36 +43,6 @@ const navItems = [
 ];
 
 function Header() {
-  useEffect(() => {
-    const viewport = window.visualViewport;
-
-    // Sans l'API (anciens navigateurs), --tabbar-visual-offset garde sa
-    // valeur de repli (0px) : le CSS position:fixed;bottom:0 s'applique
-    // tel quel, comme avant ce correctif.
-    if (!viewport) return undefined;
-
-    const updateOffset = () => {
-      // Écart entre le bas de la zone de mise en page (window.innerHeight)
-      // et le bas de la zone réellement visible (barre d'adresse déployée,
-      // clavier ouvert...). Décaler la barre de cet écart la garde dans le
-      // cadre visible sans attendre un scroll.
-      const offset = window.innerHeight - viewport.height - viewport.offsetTop;
-      document.documentElement.style.setProperty(
-        '--tabbar-visual-offset',
-        `${Math.max(0, offset)}px`
-      );
-    };
-
-    updateOffset();
-    viewport.addEventListener('resize', updateOffset);
-    viewport.addEventListener('scroll', updateOffset);
-
-    return () => {
-      viewport.removeEventListener('resize', updateOffset);
-      viewport.removeEventListener('scroll', updateOffset);
-    };
-  }, []);
-
   return (
     <>
       <header className="Header">
