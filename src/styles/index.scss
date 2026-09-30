@@ -4,6 +4,10 @@
 html {
 	scroll-behavior: smooth;
 	scroll-padding-top: v.$header-height;
+	// Garde-fou : le moindre élément qui dépasse la largeur du viewport (même
+	// de quelques pixels) ne doit jamais rendre toute la page défilable
+	// latéralement.
+	overflow-x: hidden;
 
 	@media (prefers-reduced-motion: reduce) {
 		scroll-behavior: auto;
@@ -17,6 +21,7 @@ body {
 	font-family: v.$font-family-base;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	overflow-x: hidden;
 }
 
 h1,
