@@ -1,7 +1,9 @@
 @use '../../styles/variables' as v;
 
 .App {
+	// Voir les sections : dvh suit le viewport mobile réel, vh sert de repli.
 	min-height: 100vh;
+	min-height: 100dvh;
 
 	@media (max-width: #{v.$bp-tablet - 1px}) {
 		padding-bottom: calc(#{v.$tabbar-height} + env(safe-area-inset-bottom));

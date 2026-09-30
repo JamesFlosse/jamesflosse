@@ -1,7 +1,10 @@
 @use '../../styles/variables' as v;
 
 .ContactSection {
+	// 100vh vaut la hauteur « barre d'URL masquée » et n'est jamais réévaluée
+	// sur mobile ; dvh suit le viewport réel. La ligne vh reste en repli.
 	min-height: calc(100vh - #{v.$header-height});
+	min-height: calc(100dvh - #{v.$header-height});
 	max-width: v.$content-max-width;
 	margin: 0 auto;
 	padding: v.$spacing-lg v.$spacing-md;
