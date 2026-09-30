@@ -1,10 +1,7 @@
 @use '../../styles/variables' as v;
 
 .ProjectModal {
-	// 100% plutôt que 100vw : la fenêtre <dialog> est dans le « top layer »,
-	// sa base de calcul en % est déjà le viewport, sans les subtilités propres
-	// à l'unité vw (marge de défilement fantôme sur certains navigateurs).
-	width: min(760px, calc(100% - #{v.$spacing-md}));
+	width: min(760px, calc(100vw - #{v.$spacing-md}));
 	max-height: calc(100vh - #{v.$spacing-lg});
 	padding: 0;
 	border: 1px solid v.$color-border;

@@ -58,11 +58,8 @@
 		z-index: 10;
 		height: calc(#{v.$tabbar-height} + env(safe-area-inset-bottom));
 		padding-bottom: env(safe-area-inset-bottom);
-		// Fond opaque plutôt que semi-transparent + flou : cette combinaison,
-		// avec position: fixed, force une composition GPU qui peut faire
-		// dépasser légèrement la largeur du viewport sur certains Android réels
-		// (non reproduit en émulation desktop).
-		background-color: v.$color-bg;
+		background-color: rgba(253, 246, 238, 0.9);
+		backdrop-filter: blur(12px);
 		border-top: 1px solid v.$color-border;
 	}
 
